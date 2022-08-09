@@ -1,0 +1,24 @@
+{{ todolist.name }}
+<form
+  (ngSubmit)="
+    addTodo({
+      name: todoinput.value,
+      content: contentinput.value
+    })
+  "
+>
+  <fieldset style="display: flex; flex-direction: column">
+    <label>nom</label>
+    <input type="text" #todoinput />
+    <label>description</label>
+    <textarea #contentinput></textarea>
+    <button type="submit">Ajouter un todo</button>
+  </fieldset>
+</form>
+<ul *ngFor="let todo of todolist.todos">
+  <app-todo
+    (checkTodo)="updateTodo($event)"
+    (deleteTodo)="deleteTodo($event)"
+    [todo]="todo"
+  ></app-todo>
+</ul>

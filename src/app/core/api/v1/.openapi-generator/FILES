@@ -1,0 +1,17 @@
+.gitignore
+README.md
+api.module.ts
+api/api.ts
+api/basicErrorController.service.ts
+api/todoListController.service.ts
+configuration.ts
+encoder.ts
+git_push.sh
+index.ts
+model/modelAndView.ts
+model/models.ts
+model/todo.ts
+model/todoList.ts
+model/todoRepresentation.ts
+model/view.ts
+variables.ts

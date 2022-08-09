@@ -1,0 +1,18 @@
+<li
+  style="
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 30vw;
+  "
+>
+  <input
+    (change)="toggle(checkbox.checked)"
+    type="checkbox"
+    #checkbox
+    [checked]="todo.status"
+  />
+  <p>{{ todo.name }}</p>
+  <small>{{ todo.content }}</small>
+  <button (click)="delete()">Supprimer</button>
+</li>
